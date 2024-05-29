@@ -1,6 +1,6 @@
 function SetTheme(theme)
 	theme = theme or "dracula"
-	vim.cmd.themescheme(theme)
+	vim.cmd.colorscheme(theme)
 
 	-- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 	-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
@@ -12,5 +12,5 @@ return {
     priority = 1000,
     config = function()
         vim.cmd([[colorscheme dracula]])
-    end,   
+    end,
 }

@@ -1,6 +1,6 @@
 return {
     "tpope/vim-fugitive",
-    config = function() 
+    config = function()
         vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
 
         local dinhlongviolin1_Fugitive = vim.api.nvim_create_augroup("dinhlongviolin1_Fugitive", {})
@@ -20,9 +20,9 @@ return {
                     vim.cmd.Git('push')
                 end, opts)
 
-                -- rebase always
+                -- don't rebase
                 vim.keymap.set("n", "<leader>P", function()
-                    vim.cmd.Git({'pull',  '--rebase'})
+                    vim.cmd.Git({'pull',  '--no-rebase'})
                 end, opts)
 
                 -- NOTE: It allows me to easily set the branch i am pushing and any tracking
